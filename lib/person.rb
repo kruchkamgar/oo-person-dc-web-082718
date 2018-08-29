@@ -13,7 +13,7 @@ class Person
 	end
 
 	def happiness=(happiness)
-		
+
 		if happiness > 10
 			@happiness = 10
 			# binding.pry
@@ -22,12 +22,12 @@ class Person
 		else #don't modify input if 10 > happiness > 0
 			@happiness = happiness
 		end
-			
+
 
 		# if (happiness <= 10 && happiness >= 0)
-		
+
 		# 	@happiness = happiness
-		# # else 
+		# # else
 		# # 	puts "enter a # b/n 0 and 10"
 		# end
 
@@ -35,7 +35,13 @@ class Person
 
 
 	def hygiene=(hygiene)
-		@hygiene = hygiene
+		if hygiene > 10
+			@hygiene = 10
+			# binding.pry
+		elsif hygiene < 0
+			@hygiene = 0
+		else #don't modify input if 10 > hygiene > 0
+			@hygiene = hygiene
+		end
 	end
-
 end
